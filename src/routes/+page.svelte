@@ -1,15 +1,13 @@
+<script>
+	import Info from '$lib/components/landing/Info.svelte';
+	import Hero from '$lib/components/landing/Hero.svelte';
+</script>
+
 <svelte:head>
-	<title></title>
+	<title>Sterling Surfaces | Power Washing Services</title>
 </svelte:head>
 
 <div class="container mx-auto my-auto flex flex-col">
-	<div class="flex flex-col items-center space-y-4">
-		<img class="m-2 w-80" src="/imgs/logo-500x500.png" alt="Sterling Surfaces Logo" />
-		<h1 class="font-display text-center text-5xl">Professional Power Washing Services</h1>
-		<p class="text-center text-lg">
-			Make your house shine like new! Experience the difference with our professional power washing
-			services. Call, Text, or Message us today for a free estimate and let your home sparkle!
-		</p>
-		<button class="btn btn-lg btn-primary">Schedule a FREE Estimate!</button>
-	</div>
+	<Hero />
+	<Info />
 </div>
