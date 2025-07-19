@@ -4,7 +4,7 @@
 	import Footer from '../lib/components/shared/Footer.svelte';
 	import FreeEstimateHeading from '$lib/components/shared/FreeEstimateHeading.svelte';
 	let { children } = $props();
-	export const ssr = false;
+	export const prerender = true;
 </script>
 
 <FreeEstimateHeading />
