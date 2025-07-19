@@ -4,3 +4,6 @@
 @plugin "daisyui" {
     themes: corporate --default;
 }
+@theme {
+  --font-display: "Racing Sans One", "sans-serif"; 
+}
