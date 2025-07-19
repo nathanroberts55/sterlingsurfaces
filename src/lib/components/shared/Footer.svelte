@@ -1,6 +1,6 @@
-<footer class="footer footer-horizontal footer-center bg-neutral text-primary-content p-10">
+<footer class="footer footer-horizontal footer-center bg-primary text-primary-content p-10">
 	<aside>
-		<img class="h-36" src="/imgs/sterling-surfaces-logo-small.svg" alt="" />
+		<img class="h-36" src="/imgs/sterling-surfaces-logo-white-small.svg" alt="" />
 		<p class="font-bold">
 			Sterling Surfaces
 			<br />
