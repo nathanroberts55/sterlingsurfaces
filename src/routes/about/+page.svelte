@@ -1,10 +1,12 @@
 <section class="mx-auto max-w-3xl p-4 font-sans">
 	<header>
-		<h1 class="font-display mb-8 text-center text-4xl font-bold">About Sterling Surfaces</h1>
+		<h1 class="font-display mb-10 text-center text-6xl font-bold max-md:text-4xl">
+			About Sterling Surfaces
+		</h1>
 	</header>
 
 	<section class="mb-8">
-		<h2 class="font-display mb-2 text-3xl font-semibold">Who We Are</h2>
+		<h2 class="font-display mb-2 text-center text-3xl font-semibold">Who We Are</h2>
 		<p>
 			Sterling Surfaces was founded by a group of high school friends from the Sterling area, united
 			by an entrepreneurial spirit and a passion for their community. As a local team, we prioritize
@@ -53,15 +55,22 @@
 
 	<!-- <hr class="my-8 border-t-2 border-gray-300" /> -->
 
-	<section class="bg-accent mb-8 rounded-lg p-4 text-white">
-		<h2 class="mb-2 text-xl font-semibold">Satisfaction Guaranteed</h2>
-		<p>
-			Your satisfaction is our top priority. We stand behind our work with a comprehensive
-			guarantee—if you're not completely happy, we'll make it right.
-		</p>
+	<section
+		class="bg-secondary text-secondary-content mb-8 flex flex-row items-center gap-6 rounded-lg p-4 max-md:flex-col"
+	>
+		<div class="md:w-2/3">
+			<h2 class="font-display mb-2 text-3xl font-semibold">Your Satisfaction, Guaranteed</h2>
+			<p>
+				Your satisfaction is our top priority. We stand behind our work with a comprehensive
+				guarantee—if you're not completely happy, we'll make it right.
+			</p>
+		</div>
+		<div class="md:w-1/3">
+			<img class="h-48" src="/imgs/satisfaction.png" alt="satisfaction emblem" />
+		</div>
 	</section>
 
-	<section class="text-center">
+	<section class="my-10 text-center">
 		<h3 class="mb-4 text-lg font-medium">Ready to transform your space?</h3>
 		<a href="/contact">
 			<button class="btn btn-lg btn-primary"> Request a Free Estimate</button>

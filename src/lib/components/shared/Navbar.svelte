@@ -1,4 +1,6 @@
-<div class="navbar bg-base-100 sticky top-0 z-50 shadow-sm">
+<div
+	class="navbar bg-base-500 bg-opacity-10 sticky top-0 z-50 bg-clip-padding shadow-sm backdrop-blur backdrop-contrast-100 backdrop-saturate-100 backdrop-filter"
+>
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -28,7 +30,7 @@
 		</div>
 	</div>
 	<div class="navbar-center">
-		<a class="btn btn-ghost text-xl"
+		<a class="btn btn-ghost text-xl" href="/"
 			><img class="h-16" src="/imgs/sterling-surfaces-logo-small.svg" alt="" /></a
 		>
 	</div>

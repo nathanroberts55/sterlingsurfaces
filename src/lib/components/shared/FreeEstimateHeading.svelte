@@ -16,9 +16,11 @@
 			onclick={toggleVisibility}>&times;</button
 		>
 		<div>
-			<p class="text-accent-content my-2 text-center text-lg font-bold max-md:text-sm">
-				Call or Text Sterling Surfaces for a FREE Estimate!
-			</p>
+			<a href="/contact">
+				<p class="text-accent-content my-2 text-center text-lg font-bold max-md:text-sm">
+					Call, Text, or Click Here Now for a FREE Estimate!
+				</p>
+			</a>
 		</div>
 	</div>
 {/if}
