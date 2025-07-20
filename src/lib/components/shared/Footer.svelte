@@ -10,7 +10,7 @@
 	</aside>
 	<nav>
 		<div class="grid grid-flow-col gap-4">
-			<a>
+			<a href="https://twitter.com" aria-label="Twitter">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -23,7 +23,7 @@
 					></path>
 				</svg>
 			</a>
-			<a>
+			<a href="https://youtube.com" aria-label="YouTube">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -36,7 +36,7 @@
 					></path>
 				</svg>
 			</a>
-			<a>
+			<a href="https://facebook.com" aria-label="Facebook">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
