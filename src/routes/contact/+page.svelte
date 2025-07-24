@@ -154,10 +154,10 @@
 					cols="30"
 					class="textarea textarea-accent mb-10 w-full rounded-xl border bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm"
 				></textarea>
-				<div
+				<!-- <div
 					class="g-recaptcha mx-auto my-6"
 					data-sitekey="6LdmMI4rAAAAAPObtcI6R8gKuXeJLrqyubnhQx6K"
-				></div>
+				></div> -->
 				<button class="btn btn-accent w-full rounded-full">Send</button>
 			</form>
 		</div>
