@@ -1,3 +1,28 @@
+<script>
+	let phone = '';
+
+	function formatPhone(input) {
+		const digits = input.replace(/\D/g, '').slice(0, 10);
+		let formatted = '';
+
+		if (digits.length > 0) {
+			formatted += '(' + digits.substring(0, 3);
+		}
+		if (digits.length >= 4) {
+			formatted += ') ' + digits.substring(3, 6);
+		}
+		if (digits.length >= 7) {
+			formatted += '-' + digits.substring(6, 10);
+		}
+
+		return formatted;
+	}
+
+	function handlePhoneInput(event) {
+		phone = formatPhone(event.target.value);
+	}
+</script>
+
 <section class="py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 lg:grid-cols-2">
@@ -53,96 +78,88 @@
 										sterlingssurfaces@gmail.com
 									</h5>
 								</a>
-								<a href="javascript:;" class="flex items-center">
-									<svg
-										width="30"
-										height="30"
-										viewBox="0 0 30 30"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M25 12.9169C25 17.716 21.1939 21.5832 18.2779 24.9828C16.8385 26.6609 16.1188 27.5 15 27.5C13.8812 27.5 13.1615 26.6609 11.7221 24.9828C8.80612 21.5832 5 17.716 5 12.9169C5 10.1542 6.05357 7.5046 7.92893 5.55105C9.8043 3.59749 12.3478 2.5 15 2.5C17.6522 2.5 20.1957 3.59749 22.0711 5.55105C23.9464 7.5046 25 10.1542 25 12.9169Z"
-											stroke="#009689"
-											stroke-width="2"
-										/>
-										<path
-											d="M17.5 11.6148C17.5 13.0531 16.3807 14.219 15 14.219C13.6193 14.219 12.5 13.0531 12.5 11.6148C12.5 10.1765 13.6193 9.01058 15 9.01058C16.3807 9.01058 17.5 10.1765 17.5 11.6148Z"
-											stroke="#009689"
-											stroke-width="2"
-										/>
-									</svg>
-									<h5 class="ml-5 text-base leading-6 font-normal text-black">
-										654 Sycamore Avenue, Meadowville, WA 76543
-									</h5>
-								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="rounded-2xl bg-gray-50 p-5 lg:rounded-r-2xl lg:p-11">
+			<form
+				action="https://formspree.io/f/mnnzdqrn"
+				method="POST"
+				class="flex flex-col rounded-2xl bg-gray-50 p-5 lg:rounded-r-2xl lg:p-11"
+			>
 				<h2 class="font-manrope text-accent font-display mb-11 text-4xl leading-10 font-semibold">
 					Send Us A Message
 				</h2>
 				<input
 					type="text"
-					class="mb-10 h-12 w-full rounded-full border border-gray-200 bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm focus:outline-none"
+					name="Name"
 					placeholder="Name"
+					class="input input-accent input-lg mb-10 h-12 w-full rounded-full bg-transparent pl-4 text-gray-600 placeholder-gray-400 shadow-sm"
 				/>
 				<input
-					type="text"
-					class="mb-10 h-12 w-full rounded-full border border-gray-200 bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm focus:outline-none"
+					type="email"
+					name="Email"
 					placeholder="Email"
+					class="input input-accent input-lg mb-10 h-12 w-full rounded-full bg-transparent pl-4 text-gray-600 placeholder-gray-400 shadow-sm"
 				/>
 				<input
-					type="text"
-					class="mb-10 h-12 w-full rounded-full border border-gray-200 bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm focus:outline-none"
+					type="tel"
+					bind:value={phone}
+					on:blur={handlePhoneInput}
+					name="Phone Number"
 					placeholder="Phone"
+					class="input input-accent input-lg mb-10 h-12 w-full rounded-full bg-transparent pl-4 text-gray-600 placeholder-gray-400 shadow-sm"
 				/>
+
 				<div class="mb-10">
-					<h4 class="mb-4 text-lg leading-7 font-normal text-gray-500">
-						Preferred method of communication
-					</h4>
+					<h4 class="mb-4 text-lg font-normal text-gray-500">Preferred method of communication</h4>
 					<div class="flex">
 						<div class="mr-11 flex items-center">
 							<input
 								id="radio-group-1"
 								type="radio"
-								name="radio-group"
-								class="checked:border-accent hidden checked:bg-indigo-100 checked:bg-center checked:bg-no-repeat"
+								name="Preferred Contact Method"
+								class="radio radio-accent"
+								value="Email"
 							/>
 							<label
 								for="radio-group-1"
-								class="flex cursor-pointer items-center text-base leading-6 font-normal text-gray-500"
+								class="flex cursor-pointer items-center pl-4 text-base leading-6 font-normal text-gray-500"
 							>
-								<span class="mr-2 ml-2 h-4 w-4 rounded-full border border-gray-300"></span> Email
+								Email
 							</label>
 						</div>
 						<div class="flex items-center">
 							<input
 								id="radio-group-2"
 								type="radio"
-								name="radio-group"
-								class="checked:border-accent hidden checked:bg-indigo-100 checked:bg-center checked:bg-no-repeat"
+								name="Preferred Contact Method"
+								class="radio radio-accent"
+								value="Phone"
 							/>
 							<label
 								for="radio-group-2"
-								class="flex cursor-pointer items-center text-base leading-6 font-normal text-gray-500"
+								class="flex cursor-pointer items-center pl-4 text-base leading-6 font-normal text-gray-500"
 							>
-								<span class="mr-2 ml-2 h-4 w-4 rounded-full border border-gray-300"></span> Phone
+								Phone
 							</label>
 						</div>
 					</div>
 				</div>
-				<input
-					type="text"
-					class="mb-10 h-12 w-full rounded-full border border-gray-200 bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm focus:outline-none"
+				<textarea
 					placeholder="Message"
-				/>
+					name="Message"
+					cols="30"
+					class="textarea textarea-accent mb-10 w-full rounded-xl border bg-transparent pl-4 text-lg leading-7 font-normal text-gray-600 placeholder-gray-400 shadow-sm"
+				></textarea>
+				<div
+					class="g-recaptcha mx-auto my-6"
+					data-sitekey="6LdmMI4rAAAAAPObtcI6R8gKuXeJLrqyubnhQx6K"
+				></div>
 				<button class="btn btn-accent w-full rounded-full">Send</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </section>
