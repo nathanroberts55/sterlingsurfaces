@@ -42,7 +42,7 @@
 				class="h-auto max-w-full rounded-lg shadow-lg"
 			/>
 		</div>
-		<div class="md:w-2/3">
+		<div class="flex flex-col md:w-2/3">
 			<h2 class="font-display mb-2 text-3xl font-semibold">What We Do</h2>
 			<p>
 				Sterling Surfaces specializes in professional power washing services for driveways, outdoor
@@ -50,6 +50,11 @@
 				services to clear walkways, backyards, patios, and other outdoor spaces. Every project is
 				completed with careful attention to detail and a commitment to quality craftsmanship.
 			</p>
+			<p class="my-2 text-center font-bold">See the Results of Our Work!</p>
+
+			<button class="btn btn-accent btn-lg mx-auto my-4"
+				><a href="/gallery">Visit Image Gallery</a></button
+			>
 		</div>
 	</section>
 
