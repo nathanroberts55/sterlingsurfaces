@@ -1,3 +1,11 @@
+<svelte:head>
+	<title>Sterling Surfaces | About Us</title>
+	<meta
+		name="description"
+		content="Sterling Surfaces is a local business dedicated to making your home shine. Learn more about us today!"
+	/>
+</svelte:head>
+
 <section class="mx-auto max-w-3xl p-4 font-sans">
 	<header>
 		<h1 class="font-display mb-10 text-center text-6xl font-bold max-md:text-4xl">

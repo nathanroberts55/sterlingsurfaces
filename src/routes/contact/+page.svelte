@@ -23,6 +23,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Sterling Surfaces | Contact Us</title>
+	<meta
+		name="description"
+		content="Ready to take your curb appeal to the next level? Get started by getting in contact with us today!"
+	/>
+</svelte:head>
+
 <section class="py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 lg:grid-cols-2">

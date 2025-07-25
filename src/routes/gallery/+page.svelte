@@ -12,6 +12,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Sterling Surfaces | Gallery</title>
+	<meta
+		name="description"
+		content="Want to see what your future could look like? Check out some of the amazing transformations we have achieved in our Image Gallery"
+	/>
+</svelte:head>
+
 <section class="container mx-auto mb-20 px-4">
 	<p class="font-display my-10 text-center text-4xl">Gallery</p>
 
