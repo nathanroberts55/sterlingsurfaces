@@ -27,7 +27,7 @@
 
 	<!-- Row 2: Image left, text right -->
 	<div class="flex flex-col items-center space-y-4 md:flex-row-reverse md:space-y-0 md:space-x-8">
-		<div class="max-md:m-6 md:w-1/2">
+		<div class="flex flex-col max-md:m-6 md:w-1/2">
 			<p class="font-display my-2 text-center text-4xl font-bold max-md:text-3xl md:text-right">
 				Benefits of Power Washing
 			</p>
@@ -42,6 +42,13 @@
 				<li>Prepares surfaces for painting or refinishing</li>
 				<li>Improves health by eliminating allergens and contaminants</li>
 			</ul>
+			<p class="my-2 text-center font-bold">
+				See the Benefits of a Sterling Surfaces Cleaning for youself!
+			</p>
+
+			<button class="btn btn-accent btn-lg mx-auto my-4"
+				><a href="/gallery">Visit Image Gallery</a></button
+			>
 		</div>
 		<div class="flex justify-center md:w-1/2">
 			<img
