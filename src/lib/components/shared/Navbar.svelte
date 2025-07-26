@@ -36,6 +36,8 @@
 		>
 	</div>
 	<div class="navbar-end">
-		<button class="btn btn-primary font-bold max-md:hidden"> Get a FREE Estimate </button>
+		<button class="btn btn-primary font-bold max-md:hidden"
+			><a href="/contact">Get a FREE Estimate</a></button
+		>
 	</div>
 </div>
