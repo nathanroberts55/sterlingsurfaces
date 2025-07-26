@@ -18,14 +18,20 @@ export const load: PageServerLoad = async ({ params }) => {
 	const response = await S3.send(new ListObjectsV2Command({ Bucket: BUCKET_NAME }));
 	const objects = response.Contents ?? [];
 
-	// Generate signed URLs for each object key
-	const urls = await Promise.all(
-		objects.map(async (obj) => {
-			const key = obj.Key!;
-			const command = new GetObjectCommand({ Bucket: BUCKET_NAME, Key: key });
-			return await getSignedUrl(S3, command, { expiresIn: 3600 });
-		})
-	);
+	// Generate signed URLs for each object key - For Private Bucket
+	// const urls = await Promise.all(
+	// 	objects.map(async (obj) => {
+	// 		const key = obj.Key!;
+	// 		const command = new GetObjectCommand({ Bucket: BUCKET_NAME, Key: key });
+	// 		return await getSignedUrl(S3, command, { expiresIn: 3600 });
+	// 	})
+	// );
+
+	// Generate URLs using the public bucket - might get rate limited
+	const urls = objects.map((obj) => {
+		const key = obj.Key;
+		return `https://pub-628343764a3a4682a68a66159050e652.r2.dev/${key}`;
+	});
 
 	return {
 		images: urls
